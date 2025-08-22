@@ -1,0 +1,11 @@
+a=[[" " for i in range(9)]for i in range (10)]
+for i in range(10):
+    for j in range(9):
+        if j==0 or j==8:
+            a[i][j]="*"
+        elif i<5 and (i==j or i+j==8):
+            a[i][j]="*"
+for i in range(10):
+    for j in range(9):
+        print(a[i][j],end=" ")
+    print()
