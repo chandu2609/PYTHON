@@ -1,0 +1,13 @@
+def coprimes(a,b):
+    while b>0:
+        rem=a%b
+        a=b
+        b=rem
+    if a==1:
+        return True
+n=int(input("enter a number: "))
+for i in range(5,n+1):
+    for j in range(4,i):
+        for k in range(3,j):
+            if(k**2+j**2==i**2 and coprimes(i,j) and coprimes(j,k) and coprimes(k,i)):
+                print(k,j,i)
